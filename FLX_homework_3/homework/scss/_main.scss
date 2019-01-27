@@ -1,0 +1,242 @@
+
+@mixin font{
+    text-transform: uppercase;
+}
+@mixin link{
+    text-decoration: none;
+    color:$color;
+    text-transform: uppercase;
+}
+@mixin btn{
+    background-color: $color2;
+    padding:10px 70px;
+    color:$color;
+    border: 0;
+    text-transform: uppercase;
+    float:right;
+    
+}
+@mixin display{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex{
+    display: flex;
+    justify-content: flex-end;
+}
+@mixin formcol{
+    color:$dark;
+    font-size:$small;
+}
+
+
+body{
+    margin:0 auto;
+    font-family:$font;
+   background-color: $body;
+    header{
+       background: $HeaderBackground no-repeat top/cover;
+       height:100vh;
+    .top-wrapper{
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            width: 15%;
+            img{
+                width: 100%;
+            }
+        }
+    
+        nav{
+            display: flex;
+            align-items: flex-start;
+            
+             a{
+                @include link;
+                color:$header;
+                font-size:$small;
+                font-weight: bold;
+                padding: 20px 150px 20px 150px;
+                
+                 &:nth-child(2){
+                    border-left:2px solid $gray;
+                    border-right:2px solid $gray; 
+                 }
+            }
+        }
+     }
+       section{
+           @include display;
+           position: absolute;
+           left: 50%;
+           top: 50%;
+           transform: translate(-50%, -50%);
+           @include font;
+           color:$header;
+           a {   
+               &.btn{
+               display: flex;
+               justify-content: center;
+               align-self: center;
+               background-color: $color2;
+               padding:10px 70px;
+               @include link;
+               }
+           }
+       }
+    }
+    main{
+        @include display;
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 0;
+       
+    .toolbar{
+        align-self: flex-end;
+        margin-top:20px;
+        
+        input{
+          width: 200px;
+          height:30px;
+          padding-left: 15px;
+          border: 1px solid $gray;
+          background-color: $body;
+          
+            &::placeholder{
+                color:$clrfont;
+                font-size: $small;
+            }
+        }
+        }
+        section{
+            
+               h1{
+               @include font; 
+               @include flex;
+                color:$clrfont;
+                font-size: $big;
+                }
+            
+               
+               article{
+                display:flex;
+                background-color: $background;
+                padding: 10px;
+                margin: 20px;
+                div{
+                     padding: 5px;
+                .post{
+                    .post-description{
+                        border-bottom: 1px solid $gray;
+                        font-size:$small;
+                        color:$redcolor;
+                    }
+                    h3{ 
+                       @include font;
+                       color:$dark;
+                    }
+                    p{
+                        color:$clrfont;
+                        font-size: $small;
+                        line-height: 1.5;
+                    }
+                }
+                .btn{
+                    @include btn;
+
+                }
+              }
+           } 
+         
+      }
+        section{
+            
+            div{
+                h1{
+                    @include font;
+                    color:$clrfont;
+                    font-size: $big;
+                    margin-top: 50px;
+                }
+                p{
+                   color:$clrfont;
+                   font-size: $small;
+                   line-height: 1.5; 
+                }
+            }
+            div{
+                img{
+                    width:100%; 
+                
+                }
+                
+            }
+        }
+        section{
+           margin:0;
+            h1{
+                @include font;
+                color:$clrfont;
+                @include flex;
+                font-size: $big;
+                margin-top: 50px;
+            }
+            h4{
+                @include font;
+                color:$clrfont;
+                @include flex; 
+            }
+        }
+        form{
+            @include display;
+    
+            .inf{
+                display: flex;
+    
+                .form{
+                    @include display; 
+                    width:100%;
+                    .text{
+                        @include flex;
+                        @include formcol;
+                        &:after{
+                            content: "*";
+                            font-size: $small;
+                            display: inline-block;
+                            vertical-align:top;
+                        }
+                }
+                input{
+                    margin: 0 10px 10px 0px;
+                    padding: 10px;
+                    border:1px solid $gray;
+                    background-color: $body;
+                    } 
+                 
+                }
+                
+                }
+                .quest{
+                    background-color: $body;
+                    label{
+                        @include flex;
+                        @include formcol;
+                    }
+                    
+                    textarea{
+                        width: 100%;
+                        background-color: $body;
+                        border:1px solid $gray;
+                    }   
+            }
+                
+                    button{
+                        @include btn;
+                }    
+            
+        }
+    }
+    footer{
+        color:$clrfont;
+    }
+}

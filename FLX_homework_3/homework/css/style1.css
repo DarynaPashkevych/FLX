@@ -1,0 +1,164 @@
+body {
+  margin: 0 auto;
+  font-family: "Roboto", "Ubuntu", "Cantarell", "Helvetica", sans-serif;
+  background-color: white; }
+  body header {
+    background: url(../img/header_background_v1.jpg) no-repeat top/cover;
+    height: 100vh; }
+    body header .top-wrapper {
+      display: flex;
+      justify-content: space-between; }
+      body header .top-wrapper .logo {
+        width: 15%; }
+        body header .top-wrapper .logo img {
+          width: 100%; }
+      body header .top-wrapper nav {
+        display: flex;
+        align-items: flex-start; }
+        body header .top-wrapper nav a {
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+          color: ghostwhite;
+          font-size: 15px;
+          font-weight: bold;
+          padding: 20px 150px 20px 150px; }
+          body header .top-wrapper nav a:nth-child(2) {
+            border-left: 2px solid slategray;
+            border-right: 2px solid slategray; }
+    body header section {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      color: ghostwhite; }
+      body header section a.btn {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        background-color: lightseagreen;
+        padding: 10px 70px;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase; }
+  body main {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 0; }
+    body main .toolbar {
+      align-self: flex-end;
+      margin-top: 20px; }
+      body main .toolbar input {
+        width: 200px;
+        height: 30px;
+        padding-left: 15px;
+        border: 1px solid slategray;
+        background-color: white; }
+        body main .toolbar input::placeholder {
+          color: black;
+          font-size: 15px; }
+    body main section h1 {
+      text-transform: uppercase;
+      display: flex;
+      justify-content: flex-end;
+      color: black;
+      font-size: 24px; }
+    body main section article {
+      display: flex;
+      background-color: #f5f5f5;
+      padding: 10px;
+      margin: 20px; }
+      body main section article div {
+        padding: 5px; }
+        body main section article div .post .post-description {
+          border-bottom: 1px solid slategray;
+          font-size: 15px;
+          color: red; }
+        body main section article div .post h3 {
+          text-transform: uppercase;
+          color: darkcyan; }
+        body main section article div .post p {
+          color: black;
+          font-size: 15px;
+          line-height: 1.5; }
+        body main section article div .btn {
+          background-color: lightseagreen;
+          padding: 10px 70px;
+          color: white;
+          border: 0;
+          text-transform: uppercase;
+          float: right; }
+    body main section div h1 {
+      text-transform: uppercase;
+      color: black;
+      font-size: 24px;
+      margin-top: 50px; }
+    body main section div p {
+      color: black;
+      font-size: 15px;
+      line-height: 1.5; }
+    body main section div img {
+      width: 100%; }
+    body main section {
+      margin: 0; }
+      body main section h1 {
+        text-transform: uppercase;
+        color: black;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 24px;
+        margin-top: 50px; }
+      body main section h4 {
+        text-transform: uppercase;
+        color: black;
+        display: flex;
+        justify-content: flex-end; }
+    body main form {
+      display: flex;
+      flex-direction: column; }
+      body main form .inf {
+        display: flex; }
+        body main form .inf .form {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          body main form .inf .form .text {
+            display: flex;
+            justify-content: flex-end;
+            color: darkcyan;
+            font-size: 15px; }
+            body main form .inf .form .text:after {
+              content: "*";
+              font-size: 15px;
+              display: inline-block;
+              vertical-align: top; }
+          body main form .inf .form input {
+            margin: 0 10px 10px 0px;
+            padding: 10px;
+            border: 1px solid slategray;
+            background-color: white; }
+      body main form .quest {
+        background-color: white; }
+        body main form .quest label {
+          display: flex;
+          justify-content: flex-end;
+          color: darkcyan;
+          font-size: 15px; }
+        body main form .quest textarea {
+          width: 100%;
+          background-color: white;
+          border: 1px solid slategray; }
+      body main form button {
+        background-color: lightseagreen;
+        padding: 10px 70px;
+        color: white;
+        border: 0;
+        text-transform: uppercase;
+        float: right; }
+  body footer {
+    color: black; }
